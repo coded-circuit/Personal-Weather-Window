@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+        
+    <div class="card">
+        <div class="search">
+                <input type="text" placeholder="Enter your City Name">
+                <button><img src="images/search.png"></button>
+        </div>
+        <div class="intro">
+            <div class="intro1">
+                <p>Personal Weather Window!</p>
+                 <p>Search any city and unlock real-time <br>weather insights</p><p>From sunshine to     storms, we’ve got it all covered. <br> Stay ahead of the skies and plan your day <br>with confidence!</p>
+                
+            </div>
+            <div class="intro2">
+                <img src="images/clouds.png" alt="">
+            </div>
+        </div>
+        <div class="error">
+            <p>We scanned the skies,</p>
+            <p>but couldn’t locate that city.</p>
+                <p> Try a different name!</p>
+        </div>
+        <div class="weather">
+            <div class="weather-left">
+                <div class="left1"> 
+                    <div class="main1">
+                        <h2 class="city">Guwahati</h2>
+                        <h1 class="temp">35°c</h1>
+                    </div>
+                    <img src="images/drizzle.png" class="weather-icon">
+                </div>
+                <div class="left2">
+                    <h6>Feels like : <span class="feels-like">32°c</span></h6>
+                    <h6>Max. Temperature : <span class="max-temp">32°c</span></h6>
+                    <h6>Min. Temperature : <span class="min-temp">32°c</span></h6>
+                </div>
+            </div>
+            <div class="weather-right">
+                <div class="right1">
+                    <div class="element1">
+                        <img src="images/humidity.png">
+                        <p>Humidity</p>
+                        <p class="humidity">55%</p>
+                    </div>
+                    <div class="element2">
+                        <img src="images/visibility.png" >
+                        <p>Visibility</p>
+                        <p class="visibility">1 km</p>
+                    </div>
+                    <div class="element3">
+                        <img src="images/degree.png" >
+                        <p>Wind Direction</p>
+                        <p class="degree">135°</p>
+                    </div>
+                </div>
+                <div class="right2">
+                    <div class="element1">
+                        <img src="images/pressure.png">
+                        <p>Pressure</p>
+                        <p class="pressure">999 pa</p>
+                    </div>
+                    <div class="element2">
+                        <img src="images/cloudiness.png" >
+                        <p>Clouds</p>
+                        <p class="cloudiness">40 %</p>
+                    </div>
+                    <div class="element3">
+                        <img src="images/wind.png" >
+                        <p>Wind Speed</p>
+                        <p class="wind">10 km/h</p>
+                    </div>
+                </div>
+            </div>
+        </div>    
+        </div>
+
+ <script src="script.js"></script>       
+</body>
+</html>
