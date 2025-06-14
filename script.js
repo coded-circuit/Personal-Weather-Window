@@ -14,6 +14,23 @@ async function checkWeather(city){
     else{
     var data = await response.json();
     
+    
+const utcToIST = (utcSeconds) => {
+  const date = new Date(utcSeconds * 1000);
+  return date.toLocaleTimeString("en-IN", {
+    timeZone: "Asia/Kolkata",
+    hour: "2-digit",
+    minute: "2-digit",
+    hour12: true, // optional — remove this line if you want 24-hour format
+  });
+};
+
+const sunriseUTC = data.sys.sunrise;
+const sunsetUTC = data.sys.sunset;
+
+const sunriseIST = utcToIST(sunriseUTC);
+const sunsetIST = utcToIST(sunsetUTC);
+
 
     document.querySelector('.city').innerHTML = data.name;
     document.querySelector('.temp').innerHTML = Math.round(data.main.temp) + '°c';
@@ -24,9 +41,10 @@ async function checkWeather(city){
     document.querySelector('.degree').innerHTML = data.wind.deg + '°';
     document.querySelector('.pressure').innerHTML = data.main.pressure + ' Pa';
     document.querySelector('.cloudiness').innerHTML = data.clouds.all + '%';
-    document.querySelector('.wind').innerHTML = Math.round(data.wind.speed) + ' km/h';
+    document.querySelector('.wind').innerHTML = data.wind.speed + ' km/h';
     document.querySelector('.visibility').innerHTML= data.visibility / 1000 +' km';
-
+    document.querySelector('.risetime').innerHTML= sunriseIST + ' [IST]';
+    document.querySelector('.settime').innerHTML=  sunsetIST + ' [IST]';
     if (data.weather[0].main == 'Rain' ){
       weatherIcon.src = 'images/rain.png';
     }
@@ -39,6 +57,8 @@ async function checkWeather(city){
     else if(data.weather[0].main == 'Drizzle'){
         weatherIcon.src= 'images/drizzle.png';
     }
+
+
     document.querySelector('.weather').style.display ='flex';
     document.querySelector('.intro').style.display ='none';
     document.querySelector('.error').style.display ='none';

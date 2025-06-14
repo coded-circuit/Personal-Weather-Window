@@ -56,7 +56,7 @@ body{
     display: flex;
     background-color: rgb(0, 0, 0);
     opacity: 0.5;
-    width: 90%;
+    width: 95%;
     margin-left: 2vw;
     margin-top: 5vh;
     height: 70%;
@@ -121,7 +121,7 @@ body{
     width: 200px;
     height: 200px;
     margin-top: 10px;
-    margin-left: 4rem;
+    /* margin-left: 2rem; */
 }
 .weather{
     display: flex;
@@ -154,6 +154,20 @@ body{
 
 .weather-right{
     font-size: 20px;
+}
+.weather-right img{
+    width: 35px;
+    height:35px;
+}
+.element4{
+    margin-left: -1rem;
+}
+.weather-right .element4{
+    text-align: center;
+}
+.weather-right .element4 img {
+    width: 35px;
+    height:35px;
 }
 .error p{
     font-family:"Edu VIC WA NT Hand Pre", cursive;
